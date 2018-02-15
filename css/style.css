@@ -3,9 +3,12 @@ body {
   padding: 0;
 }
 
-/*ШАПКА*/
-header {
+.helveticaFont {
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+}
 
+/*ХЭДЕР*/
+header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -50,33 +53,38 @@ header {
 }
 
 /*КОНТЕНТ*/
-
 .center {
   width: 70%;
   margin: auto;
-  min-width: 950px;
+  min-width: 768px;
 }
 
 .contentElement {
   margin-bottom: 10vh;
 }
 
+/*Блок "Ожидания"*/
 .resp {
   display: flex;
   flex-flow: row wrap;
   align-content: space-between;
   justify-content: space-between;
-
 }
 
 .respBlock {
   background-color: #E6F0F0;
-
   width: 34%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 2vw;
+  transition: all 0.3s ease;
+}
+
+.respBlock:hover{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0 0 0.9vw 0 rgba(0,0,0,0.2);
 }
 
 .wide {
@@ -114,7 +122,6 @@ header {
 
 .slider {
   width: 60%;
-
 }
 
 .workTitle > h2 {
@@ -140,83 +147,6 @@ header {
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 
-footer {
-  padding-top: 5vw;
-  padding-bottom: 10vw;
-  margin: 0;
-  padding-left: 15%;
-  padding-right: 15%;
-  background-color: #E6F0F0;
-}
-
-h1 {
-  font-family: "Helvetica", Helvetica, Arial, sans-serif;
-}
-
-.helveticaFont {
-  font-family: "Helvetica", Helvetica, Arial, sans-serif;
-}
-
-.contactsContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-family: Georgia, Times, "Times New Roman", serif;
-}
-
-.contactsInfo {
-  width: 30%;
-}
-
-.contactsInfo .invite {
-  margin-bottom: 2vw;
-}
-
-.social {
-  text-decoration: none;
-  color: #000;
-}
-
-a {
-  line-height: 2vw;
-}
-
-.social:visited {
-  color: #DD3E18;
-}
-
-.fa {
-  width: 2vw;
-}
-
-.contactsForm {
-  width: 50%;
-}
-
-.contactsFormText, .contactsFormArea {
-  width: 100%;
-  margin-bottom: 1vw;
-  border-radius: 4px;
-  border: 0;
-  padding: 1vw;
-}
-
-.contactsFormArea {
-  height: 30vh;
-  resize: none;
-}
-
-.submitButton {
-  width: 106%;
-  border-radius: 4px;
-  border: 0;
-  padding: 0.5vw;
-  margin-top: 1vw;
-  margin-bottom: 1vw;
-  color: #fff;
-  background: #DD3E18;
-  cursor: pointer;
-}
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700|Lato);
 .csslider {
@@ -280,7 +210,11 @@ a {
 
 .csslider > ul > li > img {
   width: inherit;
+  transition: all 0.3s ease-in-out;
+}
 
+.csslider > ul > li > img:hover{
+  transform: scale(1.2,1.2);
 }
 
 .csslider > .navigation {
@@ -339,10 +273,93 @@ a {
   opacity: 1;
 }
 
-@media (max-width: 768px) {
-  /*ШАПКА*/
-  header {
 
+/*ФУТЕР*/
+footer {
+  padding-top: 5vw;
+  padding-bottom: 10vw;
+  margin: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: #E6F0F0;
+}
+h1 {
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.contactsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.contactsInfo {
+  width: 30%;
+}
+
+.contactsInfo .invite {
+  margin-bottom: 2vw;
+}
+
+.social {
+  text-decoration: none;
+  color: #000;
+}
+
+a {
+  line-height: 2vw;
+}
+
+.social:visited,.social {
+  color: #DD3E18;
+}
+
+.fa-file{
+  transition: all 0.3s ease-in;
+}
+
+.fa-file:hover{
+  transform: rotate(30deg);
+}
+
+.fa {
+  width: 2vw;
+
+}
+
+.contactsForm {
+  width: 50%;
+}
+
+.contactsFormText, .contactsFormArea {
+  width: 100%;
+  margin-bottom: 1vw;
+  border-radius: 4px;
+  border: 0;
+  padding: 1vw;
+}
+
+.contactsFormArea {
+  height: 30vh;
+  resize: none;
+}
+
+.submitButton {
+  width: 106%;
+  border-radius: 4px;
+  border: 0;
+  padding: 0.5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  color: #fff;
+  background: #DD3E18;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /*ХЭДЕР*/
+  header {
     justify-content: center;
     align-items: center;
     height: inherit;
@@ -376,16 +393,14 @@ a {
     margin-bottom: 20vh;
   }
 
-
-  .waitBig{
+  .waitBig {
     display: none;
   }
+
   .wait {
     height: 100%;
     display: block;
   }
-
-
 
   .content {
     min-width: 0;
@@ -466,12 +481,6 @@ a {
 }
 
 @media (max-width: 336px) {
-
-
-
-
-
-
 
   .contactsInfo {
     flex-direction: column-reverse;
