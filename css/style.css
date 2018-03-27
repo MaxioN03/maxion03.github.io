@@ -1,0 +1,507 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.helveticaFont {
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+/*ХЭДЕР*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: #082841;
+  min-height: 100px;
+  height: 70vh;
+  color: #fff;
+  margin-bottom: 10vw;
+  width: inherit;
+}
+
+.img {
+  width: 30vw;
+  height: inherit;
+  min-height: 100px;
+  height: inherit;
+  position: absolute;
+  overflow: hidden;
+  background-image: url('../res/img/photo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.textInfo, .textTitle {
+  margin: 0;
+  margin-left: 35vw;
+}
+
+.textTitle h2 {
+  margin-top: 0;
+  font-size: 29px;
+}
+
+.textTitle h1 {
+  font-size: 48px;
+}
+
+.textInfo {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  width: 30%;
+}
+
+/*КОНТЕНТ*/
+.center {
+  width: 70%;
+  margin: auto;
+  min-width: 768px;
+}
+
+.contentElement {
+  margin-bottom: 10vh;
+}
+
+/*Блок "Ожидания"*/
+.resp {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.respBlock {
+  background-color: #E6F0F0;
+  width: 34%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2vw;
+  transition: all 0.3s ease;
+}
+
+.respBlock:hover{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  box-shadow: 0 0 0.9vw 0 rgba(0,0,0,0.2);
+}
+
+.wide {
+  width: 64%;
+}
+
+.respBlock h2 {
+  margin: 0;
+  padding: 2vw;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.respBlock span {
+  margin: 0;
+  padding: 2vw;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.wait {
+  display: none
+}
+
+/*ПОРТФОЛИО*/
+.sliderContentLeftPicture {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sliderContentRightPicture {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.slider {
+  width: 60%;
+}
+
+.workTitle > h2 {
+  margin-top: 0;
+  margin-bottom: 0.5vw;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.workTitle > a {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  color: #DD3E18;
+  text-decoration: none;
+}
+
+.workDef {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.workDefText {
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700|Lato);
+.csslider {
+  perspective: 1300px;
+  display: inline-block;
+  display: flex;
+}
+
+.csslider ul {
+  padding: 0;
+}
+
+.csslider input[type="radio"] {
+  display: none;
+}
+
+.csslider > input:nth-of-type(4):checked ~ ul li:first-of-type {
+  margin-left: -300%;
+}
+
+.csslider > input:nth-of-type(3):checked ~ ul li:first-of-type {
+  margin-left: -200%;
+}
+
+.csslider > input:nth-of-type(2):checked ~ ul li:first-of-type {
+  margin-left: -100%;
+}
+
+.csslider > input:nth-of-type(1):checked ~ ul li:first-of-type {
+  margin-left: 0%;
+}
+
+.csslider > ul {
+  width: 720px;
+  height: inherit;
+
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+}
+
+.csslider > ul > li {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  font-size: initial;
+  line-height: normal;
+  -moz-transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+  transition: all 0.5s cubic-bezier(0.4, 1.3, 0.65, 1);
+  vertical-align: top;
+
+}
+
+.csslider > ul > li > img {
+  width: inherit;
+  transition: all 0.3s ease-in-out;
+}
+
+.csslider > ul > li > img:hover{
+  transform: scale(1.2,1.2);
+}
+
+.csslider > .navigation {
+  position: absolute;
+  bottom: 45%;
+  z-index: 10;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
+  user-select: none;
+}
+
+.navigationRight {
+  left: 102%;
+}
+
+.navigationLeft {
+  right: 102%;
+}
+
+.csslider > .navigation label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 4px 4px;
+  padding: 4px;
+  background: #DD3E18;
+}
+
+.csslider > .navigation label:hover:after {
+  opacity: 1;
+}
+
+.csslider > .navigation label:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -4px;
+  margin-top: -4px;
+  background: #000;
+  border-radius: 50%;
+  padding: 4px;
+  opacity: 0;
+}
+
+.csslider.inside .navigation {
+  bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.csslider > input:nth-of-type(1):checked ~ .navigation label:nth-of-type(1):after,
+.csslider > input:nth-of-type(2):checked ~ .navigation label:nth-of-type(2):after,
+.csslider > input:nth-of-type(3):checked ~ .navigation label:nth-of-type(3):after {
+  opacity: 1;
+}
+
+
+/*ФУТЕР*/
+footer {
+  padding-top: 5vw;
+  padding-bottom: 10vw;
+  margin: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: #E6F0F0;
+}
+h1 {
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+.contactsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+.contactsInfo {
+  width: 30%;
+}
+
+.contactsInfo .invite {
+  margin-bottom: 2vw;
+}
+
+.social {
+  text-decoration: none;
+  color: #000;
+}
+
+a {
+  line-height: 2vw;
+}
+
+.social:visited,.social {
+  color: #DD3E18;
+}
+
+.fa-file{
+  transition: all 0.3s ease-in;
+}
+
+.fa-file:hover{
+  transform: rotate(30deg);
+}
+
+.fa {
+  width: 2vw;
+
+}
+
+.contactsForm {
+  width: 50%;
+}
+
+.contactsFormText, .contactsFormArea {
+  width: 100%;
+  margin-bottom: 1vw;
+  border-radius: 4px;
+  border: 0;
+  padding: 1vw;
+}
+
+.contactsFormArea {
+  height: 30vh;
+  resize: none;
+}
+
+.submitButton {
+  width: 106%;
+  border-radius: 4px;
+  border: 0;
+  padding: 0.5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  color: #fff;
+  background: #DD3E18;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /*ХЭДЕР*/
+  header {
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    min-height: 300px;
+    text-align: center;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+  }
+
+  .img {
+    position: static;
+    height: 50vw;
+    width: 50vw;
+    border-radius: 50%;
+    min-height: 50px;
+  }
+
+  .textInfo, .textTitle {
+    margin-left: 0;
+    width: 80%;
+  }
+
+  /*КОНТЕНТ*/
+  .center {
+    width: 80%;
+    margin: auto;
+    min-width: 704px;
+  }
+
+  .contentElement {
+    margin-bottom: 20vh;
+  }
+
+  .waitBig {
+    display: none;
+  }
+
+  .wait {
+    height: 100%;
+    display: block;
+  }
+
+  .content {
+    min-width: 0;
+  }
+
+  .contentElement {
+    flex-direction: column-reverse;
+    margin-bottom: 10vh;
+  }
+
+  .workTitle, .workDef {
+    width: 100%;
+    margin-bottom: 5vw;
+  }
+
+  .workTitle h2 {
+    margin-bottom: 0.6em;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .csslider > .navigation {
+    bottom: -8px;
+    left: 45%;
+    margin-bottom: -10px;
+  }
+
+  .csslider > .navigationLeft {
+    right: 0;
+    left: 0;
+  }
+
+  .wait ul {
+    width: 100%;
+  }
+
+  .wait .respBlock {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .wait .navigation {
+    left: 40%;
+  }
+
+  /*ФУТЕР*/
+  footer {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .contactsContainer {
+    flex-direction: column;
+
+  }
+
+  .contactsInfo {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5vw;
+  }
+
+  .invite {
+    width: 50%;
+  }
+
+  .contactsForm {
+    width: 98%;
+  }
+
+  .submitButton {
+    width: 102%;
+  }
+
+}
+
+@media (max-width: 336px) {
+
+  .contactsInfo {
+    flex-direction: column-reverse;
+  }
+
+  .contactsInfo .invite, .contactsInfo .socials {
+    width: 100%;
+    margin-top: 5vw;
+  }
+
+  .contactsInfo .socials .fa {
+    width: 8vw;
+  }
+
+  .contactsFormText, .contactsFormArea {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+  }
+
+  .submitButton {
+    padding: 1em;
+  }
+
+}
